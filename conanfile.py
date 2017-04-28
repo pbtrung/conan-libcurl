@@ -26,7 +26,7 @@ class LibCurlConan(ConanFile):
                "with_libmetalink": [True, False]}
     default_options = "shared=False", "with_openssl=True", "disable_threads=False", \
                       "with_ldap=False", "custom_cacert=False", "darwin_ssl=True",  \
-                      "with_libssh2=False", "with_libidn=False", "with_librtmp=False", \
+                      "with_libssh2=True", "with_libidn=False", "with_librtmp=False", \
                       "with_libmetalink=False"
     exports = ["CMakeLists.txt", "FindCURL.cmake"]
     url="https://github.com/pbtrung/conan-libcurl"
