@@ -4,5 +4,3 @@ include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 CONAN_BASIC_SETUP()
 
 ADD_EXECUTABLE(example example.c)
-MESSAGE(${CONAN_LIBS})
-TARGET_LINK_LIBRARIES(example ${CONAN_LIBS})
