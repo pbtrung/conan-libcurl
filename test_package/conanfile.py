@@ -11,7 +11,7 @@ channel = os.getenv("CONAN_CHANNEL", default_channel)
 username = os.getenv("CONAN_USERNAME", default_user)
 
 class DefaultNameConan(ConanFile):
-    version = "7.53.1"
+    version = "7.54.0"
     settings = "os", "compiler", "arch", "build_type"
     generators = "cmake"
     requires = "libcurl/%s@%s/%s" % (version, username, channel)
