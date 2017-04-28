@@ -10,6 +10,7 @@ class LibCurlConan(ConanFile):
     description = "libcurl - the multiprotocol file transfer library"
     name = "libcurl"
     version = "7.54.0"
+    
     ZIP_FOLDER_NAME = "curl-%s" % version
     generators = "cmake", "txt"
     settings = "os", "arch", "compiler", "build_type"
