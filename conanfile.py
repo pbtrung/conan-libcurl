@@ -10,7 +10,7 @@ class LibCurlConan(ConanFile):
     description = "libcurl - the multiprotocol file transfer library"
     name = "libcurl"
     version = "7.54.0"
-    
+
     ZIP_FOLDER_NAME = "curl-%s" % version
     generators = "cmake", "txt"
     settings = "os", "arch", "compiler", "build_type"
@@ -46,7 +46,10 @@ class LibCurlConan(ConanFile):
             self.requires("libssh2/1.8.0@eliaskousk/stable")
             self.options["libssh2"].shared = self.options.shared
         else:
-            del self.requires["libssh2"]
+            try:
+                del self.requires["libssh2"]
+            except:
+                pass
 
         if self.settings.os != "Macos":
             try:
